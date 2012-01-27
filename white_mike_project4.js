@@ -3,60 +3,42 @@
 // Assignment: Project 4
 
 // alert("JavaScript works!");
-// //// STRING SETS ////
+// **** STRING SETS **** //
 
 // phone number pattern - add hyphens
-function phoneNum(nStr)
+var getPhoneNum = function(nStr)
 {
-	nStr += '555555555';
-	x = nStr.split('.');
+	nStr += '';
+	x = nStr.split('-');
 	x1 = x[0];
-	x2 = x.length > 1 ? '.' + x[1] : '';
-	var rgx = /(\d+)(\d{3})/;
+	var rgx = /(\d{3})(\d{3})(\d{4})/;
 	while (rgx.test(x1)) {
-		x1 = x1.replace(rgx, '$1' + '-' + '$2');
+		x1 = x1.replace(rgx, '$1' + '-' + '$2' + '-' + '$3');
 	}
-	return x1 + x2;
-}
-function phoneNumCheck()
-{
-	var phoneNum = ("888888888");
-	var areaCode = phoneNum.substring(0,2);
-	var firstThree = phoneNum.substring(3,5);
-	var lastFour = phoneNum.substring(6,9);
-}
-console.log(phoneNumCheck);
-
+	return x1;
+};
+console.log(getPhoneNum("5555555555"));
 
 // email validator - we use something similar to this at work all the time
-function validEmail(field, alertTxt) 
+var validEmail = function(field, alertTxt) 
 {
-	with (field)
+	var x=document.forms["emailForm"]["email"].value;
+	var atpos=x.indexOf("@");
+	var dotpos=x.lastIndexOf(".");
+	if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
 	{
-		apos = value.indexOf("@");
-		dotpos = value.lastIndexOf(".");
-			if(apos<1 || dotpos-apos<2)
-				{alert(alertTxt); return false;}
-			else
-				{ return true; }
-	}
-}
-function validEmail(thisform) 
-{
-	with (thisform)
-	{
-		if(validEmail(email,"Please enter a valid email")==false)
-			{email.focus();return false;}
+		alert("Please enter a valid e-mail address");
+		return false;
 	}
 }
 
-// //// NUMBER SETS ////
+// **** NUMBER SETS **** //
 /* formats a number to 2 decimal places
 * and rounds if more than 2 places after the decimal point
 */
-var numRound = new Number();
+var numRound = new Number(666);
 document.write(numRound.toFixed(2));
 
 //Format a number to use a specific number of decimal places, as for money: 2.1 → 2.10
 
-// //// ARRAY SETS ////
+// **** ARRAY SETS **** //
