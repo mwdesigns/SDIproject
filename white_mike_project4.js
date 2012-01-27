@@ -3,7 +3,9 @@
 // Assignment: Project 4
 
 // alert("JavaScript works!");
+////////////////////////////
 // **** STRING SETS **** //
+///////////////////////////
 
 // phone number pattern - add hyphens
 var getPhoneNum = function(nStr)
@@ -36,6 +38,7 @@ var validEmail = function(field, alertTxt)
 
 //Is the string a URL? (Does it start with http: or https:?)
 //[ToDo] create this function
+//END
 
 // Title Case String - returns the first letter of each word to capital
 var toTitleCase = function(toTransform) {
@@ -44,14 +47,46 @@ var toTitleCase = function(toTransform) {
   });
 }
 //console.log(toTitleCase("mike d. white"))
+//END
 
+// Given a string that is a list of things separated by a given string, as well as another string separator, return a string with the first separator changed to the second: "a,b,c" + "," + "/" → "a/b/c".
+//[ToDo] create this function
+//END
+
+////////////////////////////
 // **** NUMBER SETS **** //
-/* formats a number to 2 decimal places
-* and rounds if more than 2 places after the decimal point
-*/
+///////////////////////////
+// formats a number to 2 decimal places and rounds if more than 2 places after the decimal point
+
 var numRound = new Number(666);
 document.write(numRound.toFixed(2));
+//END
 
-//Format a number to use a specific number of decimal places, as for money: 2.1 → 2.10
+// Format a number to use a specific number of decimal places, as for money: 2.1 → 2.10
 
+//END
+
+// Fuzzy-match a number: is the number above or below a number within a certain percent?
+//END
+
+// Find the number of hours or days difference between two dates.
+//END
+
+// Given a string version of a number such as "42", return the value as an actual Number, such as 42.
+//END
+
+///////////////////////////
 // **** ARRAY SETS **** //
+/////////////////////////
+
+// Find the smallest value in an array that is greater than a given number
+
+//END
+
+// Find the total value of just the numbers in an array, even if some of the items are not numbers.
+
+//END
+
+// Given an array of objects and the name of a key, return the array sorted by the value of that key in each of the objects: "a" + [{a:2},{a:3},{a:1}] → [{a:1},{a:2},{a:3}].
+
+//END
