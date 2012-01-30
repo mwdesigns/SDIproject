@@ -8,10 +8,10 @@
 ///////////////////////////
 
 // phone number pattern - add hyphens
-var getPhoneNum = function(nStr)
+var getPhoneNum = function(str)
 {
-	nStr += '';
-	x = nStr.split('-');
+	str += '';
+	x = str.split('-');
 	x1 = x[0];
 	var rgx = /(\d{3})(\d{3})(\d{4})/;
 	while (rgx.test(x1)) {
@@ -80,11 +80,32 @@ document.write(numRound.toFixed(2));
 /////////////////////////
 
 // Find the smallest value in an array that is greater than a given number
+// this needs to be revised this function only give the smallest value of the array
+var minValue = function (arr, num) {
+	var min = arr[0];
+	var num = num;
+		for (i=0; i<arr.length; i++) {
+	if (arr[i]<min) {
+		min = arr[i];
+		}
+	}
+    return min;
+};
+//console.log(minValue([2,3,4,5,6,7], 5))
+
 
 //END
 
 // Find the total value of just the numbers in an array, even if some of the items are not numbers.
-
+var getNumSum = function(arr) {
+	var arr = [0];
+	var sum = 0;
+	for (var i=0; i<arr.length; i++) {
+		if (!isNaN(parseInt(arr[i]))) { sum += arr[i]; }
+		}
+		//return sum
+};
+//console.log(getNumSum("1,b,2,c,3,d"));
 //END
 
 // Given an array of objects and the name of a key, return the array sorted by the value of that key in each of the objects: "a" + [{a:2},{a:3},{a:1}] → [{a:1},{a:2},{a:3}].
